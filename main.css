@@ -11,7 +11,8 @@
     --clr-primary: #774be5;
     --clr-primary-rgb: 119, 75, 229;
     --clr-primary-light: hsl(257, 75%, 65%);
-    --clr-secondary: #323d68;
+    --clr-secondary: #172d42;
+    --clr-bg-light-ui: hsla(207, 100%, 98%, 0.5);
 
     /* Fonts */
     --font-main: "Comfortaa", sans-serif;
@@ -22,6 +23,7 @@
     /* Sizes */
     --navbar-height: 70px;
     --radius-full: 100px;
+    --raduis-16: 16px;
     --radius-medium: 20px;
     --radius-card: 16px;
     --radius-button: 110px;
@@ -93,12 +95,12 @@ button {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--clr-bg-dark);
+    background-color: var(--clr-bg-light-ui);
     justify-content: space-between;
     align-items: center;
     display: flex;
-    box-shadow: var(--shadow-soft);
-    border-radius: var(--radius-full);
+    backdrop-filter: blur(20px);
+    border-radius: var(--raduis-16);
     transition: border-radius var(--t-fast);
     padding: 0 20px;
 }
@@ -125,7 +127,7 @@ button {
     font-size: 15px;
     font-family: var(--font-main);
     font-weight: normal;
-    color: var(--clr-white);
+    color: var(--clr-text-dark);
     font-style: normal;
 }
 
@@ -175,17 +177,17 @@ button {
 .contact-btn {
     width: fit-content;
     height: min-content;
-    background: linear-gradient(125deg, var(--clr-primary) -4%, rgb(var(--clr-primary-rgb)) 100%);
+    background: linear-gradient(125deg, var(--clr-bg-dark) -4%, var(--clr-secondary) 100%);
     color: var(--clr-white);
     font-weight: 500;
     font-size: 16px;
     border: none;
     border-radius: var(--radius-button);
     box-shadow:
-        inset 0px 1px 2px 0px #c0b0e8,
-        0px 0.71px 0.71px -0.58px rgba(99, 69, 173, 0.35),
-        0px 1.81px 1.81px -1.17px rgba(99, 69, 173, 0.34),
-        0px 3.62px 3.62px -1.75px rgba(99, 69, 173, 0.33);
+        inset 0px 1px 2px 0px #172d42,
+        0px 0.71px 0.71px -0.58px hsla(209, 47%, 17%, 0.801),
+        0px 1.81px 1.81px -1.17px hsla(209, 47%, 17%, 0.575),
+        0px 3.62px 3.62px -1.75px hsla(209, 47%, 17%, 0.404);
 }
 
 .contact-btn:hover {
@@ -193,7 +195,7 @@ button {
     box-shadow:
         inset 0 1px 2px rgba(184, 193, 230, 0.5),
         0 6px 12px rgba(46, 64, 128, 0.35);
-    background: linear-gradient(127deg, var(--clr-primary-light), var(--clr-primary-light));
+    background: linear-gradient(127deg, var(--clr-bg-dark), var(--clr-secondary));
 }
 
 .contact-btn:active {
