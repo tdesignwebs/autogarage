@@ -315,6 +315,12 @@ h2 {
     color: var(--clr-text-dark);
     text-align: center;
 }
+.review-text {
+    font-size: 56px;
+    font-weight: bolder;
+    color: var(--clr-text-dark);
+    text-align: center;
+}
 
 .sub-hero-text {
     font-size: 16px;
